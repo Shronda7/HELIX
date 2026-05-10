@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HELIX &mdash; Human Emotional Life Integration Calculus</title>
+  <meta name="description" content="A mathematical framework for modeling trauma, addiction, and healing as interconnected emotional systems. Created by Shronda Jeanine & Company." />
+  <meta property="og:title" content="HELIX &mdash; Human Emotional Life Integration Calculus" />
+  <meta property="og:description" content="Motion Calculus for Human Emotional Dynamics. With Purpose on Purpose." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/helix.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__brand" aria-label="HELIX Home">
+        <span class="nav__helix-mark" aria-hidden="true">&#x2ADD;</span>
+        <span class="nav__brand-name">HELIX</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#framework" class="nav__link">Framework</a></li>
+        <li><a href="#model" class="nav__link">The Model</a></li>
+        <li><a href="#visualization" class="nav__link">Visualization</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+      </ul>
+      <a href="https://ko-fi.com/shrondajeanine" class="nav__cta" target="_blank" rel="noopener">Support the Work</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="hero__particles" aria-hidden="true" id="particles"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Shronda Jeanine &amp; Company &mdash; With Purpose on Purpose</p>
+      <div class="hero__spiral-container" aria-hidden="true">
+        <svg class="hero__spiral" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="helixGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="helixGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+          <path class="helix-strand-1" d="M 60 10 C 90 30, 30 50, 60 70 C 90 90, 30 110, 60 130 C 90 150, 30 170, 60 190" fill="none" stroke="url(#helixGrad1)" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="helix-strand-2" d="M 60 10 C 30 30, 90 50, 60 70 C 30 90, 90 110, 60 130 C 30 150, 90 170, 60 190" fill="none" stroke="url(#helixGrad2)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="60" y1="70" x2="60" y2="70" class="helix-rung" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+          <line x1="75" y1="40" x2="45" y2="40" class="helix-rung" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+          <line x1="45" y1="100" x2="75" y2="100" class="helix-rung" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+          <line x1="75" y1="160" x2="45" y2="160" class="helix-rung" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+        </svg>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-main">HELIX</span>
+        <span class="hero__title-sub">Human Emotional Life Integration Calculus</span>
+      </h1>
+      <p class="hero__tagline">Motion Calculus for Human Emotional Dynamics</p>
+      <p class="hero__description">
+        A mathematical framework modeling the dynamics of trauma, abuse, and addiction
+        as interconnected emotional systems — where healing is not the absence of damage,
+        but an emergent property of the whole.
+      </p>
+      <div class="hero__actions">
+        <a href="#visualization" class="btn btn--primary">Launch Model</a>
+        <a href="#framework" class="btn btn--ghost">Read the Framework</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- FRAMEWORK -->
+  <section class="section" id="framework">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">The Foundation</span>
+        <h2 class="section__title">Why Mathematics?</h2>
+      </div>
+      <div class="framework-grid">
+        <div class="framework-text">
+          <p class="lead">
+            Traditional frameworks treat trauma, addiction, and healing as sequential events.
+            Clinical experience tells a more complex story: these states are <em>simultaneous and interdependent</em>.
+          </p>
+          <p>
+            By modeling them as coupled differential equations&mdash;the same mathematical language
+            used to describe planetary orbits, population dynamics, and fluid mechanics&mdash;HELIX
+            makes hidden trajectories visible. What is visible can be understood. What is understood
+            can be influenced.
+          </p>
+          <p>
+            The double helix is not a metaphor borrowed from biology. It is a structural truth.
+            Trauma and healing do not alternate&mdash;they co-evolve. They are bound to each other
+            the same way the two strands of DNA are bound: opposing in direction, unified in function.
+          </p>
+          <blockquote class="pullquote">
+            The goal is not to make people into equations.<br/>
+            The goal is to make the equations feel like people.
+          </blockquote>
+        </div>
+        <div class="framework-cards">
+          <div class="glass-card framework-card">
+            <div class="framework-card__icon" aria-hidden="true">&#x03B1;</div>
+            <h3 class="framework-card__title">Coupled Dynamics</h3>
+            <p class="framework-card__body">Every function influences every other. Nothing in the model is isolated&mdash;just as nothing in human experience is isolated.</p>
+          </div>
+          <div class="glass-card framework-card">
+            <div class="framework-card__icon" aria-hidden="true">&#x222B;</div>
+            <h3 class="framework-card__title">Non-Linear Interaction</h3>
+            <p class="framework-card__body">Trauma impairs regulation; impaired regulation reduces healing; reduced healing allows trauma to persist. The system spirals&mdash;in either direction.</p>
+          </div>
+          <div class="glass-card framework-card">
+            <div class="framework-card__icon" aria-hidden="true">&#x0394;t</div>
+            <h3 class="framework-card__title">Time-Dependent Evolution</h3>
+            <p class="framework-card__body">These are trajectories, not snapshots. The model shows how states evolve, not just where they start.</p>
+          </div>
+          <div class="glass-card framework-card">
+            <div class="framework-card__icon" aria-hidden="true">&#x2202;</div>
+            <h3 class="framework-card__title">Intervention Modeling</h3>
+            <p class="framework-card__body">Adjusting support levels and healing rates produces measurable changes across every function. Therapeutic leverage becomes visible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MODEL -->
+  <section class="section section--dark" id="model">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Core Mathematics</span>
+        <h2 class="section__title">The Five Functions</h2>
+      </div>
+      <div class="functions-grid">
+        <div class="function-card glass-card" data-fn="T">
+          <div class="function-card__badge" style="--fn-color: #ef4444;">T(t)</div>
+          <h3 class="function-card__name">Trauma Intensity</h3>
+          <p class="function-card__desc">Decays exponentially under healing conditions, but experiences cyclic resurgence through triggers. Never simply disappears.</p>
+          <code class="function-card__eq">dT/dt = &minus;&alpha;&middot;T&middot;H + &beta;&middot;sin(&omega;t)</code>
+        </div>
+        <div class="function-card glass-card" data-fn="A">
+          <div class="function-card__badge" style="--fn-color: #f97316;">A(t)</div>
+          <h3 class="function-card__name">Addiction State</h3>
+          <p class="function-card__desc">Self-reinforcing loop with tolerance buildup. Models how compulsive patterns resist disruption from the inside.</p>
+          <code class="function-card__eq">dA/dt = &gamma;&middot;A&middot;(1&minus;A/A<sub>max</sub>) &minus; &delta;&middot;E</code>
+        </div>
+        <div class="function-card glass-card" data-fn="E">
+          <div class="function-card__badge" style="--fn-color: #a855f7;">E(t)</div>
+          <h3 class="function-card__name">Emotional Regulation</h3>
+          <p class="function-card__desc">Directly affected by trauma load and available support. The system&rsquo;s ability to manage its own inputs.</p>
+          <code class="function-card__eq">dE/dt = &epsilon;&middot;H &minus; &zeta;&middot;T &minus; &eta;&middot;A</code>
+        </div>
+        <div class="function-card glass-card" data-fn="H">
+          <div class="function-card__badge" style="--fn-color: #22c55e;">H(t)</div>
+          <h3 class="function-card__name">Healing Trajectory</h3>
+          <p class="function-card__desc">An integration over time of support systems and self-regulation capacity. Healing is cumulative&mdash;it compounds.</p>
+          <code class="function-card__eq">dH/dt = &theta;&middot;(S &minus; H) + &iota;&middot;E</code>
+        </div>
+        <div class="function-card glass-card" data-fn="R">
+          <div class="function-card__badge" style="--fn-color: #c9a84c;">R(t)</div>
+          <h3 class="function-card__name">Dynamic Resilience</h3>
+          <p class="function-card__desc">Grows or diminishes based on the current state of all other functions. Not a trait&mdash;a system output.</p>
+          <code class="function-card__eq">dR/dt = &kappa;&middot;(E + H &minus; T &minus; A)</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUALIZATION -->
+  <section class="section" id="visualization">
+    <div class="container container--wide">
+      <div class="section__header">
+        <span class="section__label">Interactive System</span>
+        <h2 class="section__title">Run the Model</h2>
+        <p class="section__intro">Adjust parameters to model different intervention strategies. Observe how changes in one function propagate through the entire system.</p>
+      </div>
+
+      <div class="viz-layout">
+        <!-- CONTROLS -->
+        <aside class="viz-controls glass-card" aria-label="Model parameters">
+          <h3 class="controls__heading">Initial Conditions</h3>
+          <div class="control-group" id="initial-conditions">
+            <div class="control-item">
+              <label class="control-label" for="init-trauma">
+                Trauma Intensity
+                <span class="control-value" id="val-init-trauma">0.80</span>
+              </label>
+              <input type="range" id="init-trauma" class="control-slider" min="0" max="1" step="0.05" value="0.80" aria-label="Initial trauma intensity" />
+              <div class="control-track"><span class="control-fill" id="fill-init-trauma" style="width:80%"></span></div>
+            </div>
+            <div class="control-item">
+              <label class="control-label" for="init-addiction">
+                Addiction State
+                <span class="control-value" id="val-init-addiction">0.50</span>
+              </label>
+              <input type="range" id="init-addiction" class="control-slider" min="0" max="1" step="0.05" value="0.50" aria-label="Initial addiction state" />
+              <div class="control-track"><span class="control-fill" id="fill-init-addiction" style="width:50%"></span></div>
+            </div>
+            <div class="control-item">
+              <label class="control-label" for="init-regulation">
+                Emotional Regulation
+                <span class="control-value" id="val-init-regulation">0.30</span>
+              </label>
+              <input type="range" id="init-regulation" class="control-slider" min="0" max="1" step="0.05" value="0.30" aria-label="Initial regulation capacity" />
+              <div class="control-track"><span class="control-fill" id="fill-init-regulation" style="width:30%"></span></div>
+            </div>
+          </div>
+
+          <h3 class="controls__heading controls__heading--mt">Intervention Parameters</h3>
+          <div class="control-group" id="intervention-params">
+            <div class="control-item">
+              <label class="control-label" for="support-level">
+                Support Level
+                <span class="control-value" id="val-support-level">0.70</span>
+              </label>
+              <input type="range" id="support-level" class="control-slider slider--gold" min="0" max="1" step="0.05" value="0.70" aria-label="Support level" />
+              <div class="control-track"><span class="control-fill control-fill--gold" id="fill-support-level" style="width:70%"></span></div>
+            </div>
+            <div class="control-item">
+              <label class="control-label" for="healing-rate">
+                Healing Rate
+                <span class="control-value" id="val-healing-rate">0.40</span>
+              </label>
+              <input type="range" id="healing-rate" class="control-slider slider--gold" min="0.05" max="1" step="0.05" value="0.40" aria-label="Healing rate" />
+              <div class="control-track"><span class="control-fill control-fill--gold" id="fill-healing-rate" style="width:35%"></span></div>
+            </div>
+            <div class="control-item">
+              <label class="control-label" for="trigger-frequency">
+                Trigger Frequency
+                <span class="control-value" id="val-trigger-frequency">0.50</span>
+              </label>
+              <input type="range" id="trigger-frequency" class="control-slider" min="0.1" max="2" step="0.1" value="0.50" aria-label="Trigger frequency" />
+              <div class="control-track"><span class="control-fill" id="fill-trigger-frequency" style="width:21%"></span></div>
+            </div>
+            <div class="control-item">
+              <label class="control-label" for="addiction-strength">
+                Addiction Strength
+                <span class="control-value" id="val-addiction-strength">0.30</span>
+              </label>
+              <input type="range" id="addiction-strength" class="control-slider" min="0" max="1" step="0.05" value="0.30" aria-label="Addiction self-reinforcement" />
+              <div class="control-track"><span class="control-fill" id="fill-addiction-strength" style="width:30%"></span></div>
+            </div>
+          </div>
+
+          <div class="controls__actions">
+            <button class="btn btn--primary btn--full" id="btn-run" type="button">Run Simulation</button>
+            <button class="btn btn--ghost btn--full" id="btn-reset" type="button">Reset Defaults</button>
+          </div>
+
+          <!-- LEGEND -->
+          <div class="legend">
+            <h3 class="controls__heading controls__heading--mt">Functions</h3>
+            <ul class="legend__list" role="list">
+              <li class="legend__item"><span class="legend__dot" style="background:#ef4444"></span> T(t) &mdash; Trauma</li>
+              <li class="legend__item"><span class="legend__dot" style="background:#f97316"></span> A(t) &mdash; Addiction</li>
+              <li class="legend__item"><span class="legend__dot" style="background:#a855f7"></span> E(t) &mdash; Regulation</li>
+              <li class="legend__item"><span class="legend__dot" style="background:#22c55e"></span> H(t) &mdash; Healing</li>
+              <li class="legend__item"><span class="legend__dot" style="background:#c9a84c"></span> R(t) &mdash; Resilience</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CHART AREA -->
+        <main class="viz-chart-area" aria-label="Visualization output">
+          <div class="chart-container glass-card">
+            <div class="chart-header">
+              <h3 class="chart-title">System Trajectory</h3>
+              <span class="chart-subtitle" id="chart-status">Configure parameters and run the simulation</span>
+            </div>
+            <div class="chart-canvas-wrap">
+              <canvas id="helix-main-chart" role="img" aria-label="HELIX system trajectory chart showing T, A, E, H, R over time"></canvas>
+            </div>
+          </div>
+
+          <div class="mini-charts-grid">
+            <div class="mini-chart glass-card">
+              <div class="mini-chart__label" style="--fn-color:#ef4444">T(t)</div>
+              <canvas id="chart-trauma" aria-label="Trauma trajectory"></canvas>
+            </div>
+            <div class="mini-chart glass-card">
+              <div class="mini-chart__label" style="--fn-color:#f97316">A(t)</div>
+              <canvas id="chart-addiction" aria-label="Addiction trajectory"></canvas>
+            </div>
+            <div class="mini-chart glass-card">
+              <div class="mini-chart__label" style="--fn-color:#a855f7">E(t)</div>
+              <canvas id="chart-regulation" aria-label="Regulation trajectory"></canvas>
+            </div>
+            <div class="mini-chart glass-card">
+              <div class="mini-chart__label" style="--fn-color:#22c55e">H(t)</div>
+              <canvas id="chart-healing" aria-label="Healing trajectory"></canvas>
+            </div>
+            <div class="mini-chart glass-card">
+              <div class="mini-chart__label" style="--fn-color:#c9a84c">R(t)</div>
+              <canvas id="chart-resilience" aria-label="Resilience trajectory"></canvas>
+            </div>
+          </div>
+
+          <!-- OUTCOME METRICS -->
+          <div class="metrics-row glass-card" id="metrics-row" aria-label="Simulation outcome metrics">
+            <div class="metric">
+              <span class="metric__label">Final Trauma</span>
+              <span class="metric__value" id="m-trauma">&mdash;</span>
+            </div>
+            <div class="metric">
+              <span class="metric__label">Final Addiction</span>
+              <span class="metric__value" id="m-addiction">&mdash;</span>
+            </div>
+            <div class="metric">
+              <span class="metric__label">Final Regulation</span>
+              <span class="metric__value" id="m-regulation">&mdash;</span>
+            </div>
+            <div class="metric">
+              <span class="metric__label">Final Healing</span>
+              <span class="metric__value" id="m-healing">&mdash;</span>
+            </div>
+            <div class="metric">
+              <span class="metric__label">Final Resilience</span>
+              <span class="metric__value" id="m-resilience">&mdash;</span>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--dark" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section__label">The Creator</span>
+          <h2 class="section__title">Shronda Jeanine &amp; Company</h2>
+          <p class="lead">
+            A healing, coaching, and community advocacy brand based in Phoenix, Arizona.
+          </p>
+          <p>
+            Through the <strong>OVERCOME Method</strong>, civic education, content creation,
+            and tools like HELIX, Shronda Jeanine &amp; Company creates frameworks that make
+            complex human experiences navigable&mdash;for individuals, communities, and practitioners.
+          </p>
+          <p>
+            HELIX was born from the recognition that the people who needed tools like this
+            most were often the last to receive them. This framework is freely available because
+            healing is not a privilege.
+          </p>
+          <div class="about-contact">
+            <a href="https://shrondajeanineco.com" class="contact-link" target="_blank" rel="noopener">shrondajeanineco.com</a>
+            <a href="mailto:shrjeacompany@gmail.com" class="contact-link">shrjeacompany@gmail.com</a>
+            <a href="tel:6027590158" class="contact-link">(602) 759-0158</a>
+          </div>
+          <div class="about-platforms">
+            <a href="https://ko-fi.com/shrondajeanine" class="btn btn--primary" target="_blank" rel="noopener">Support on Ko-fi</a>
+            <a href="https://youtube.com/@OnPurposeWithPurpose9" class="btn btn--ghost" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://instagram.com/shrondajeanine" class="btn btn--ghost" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="about-notice glass-card">
+          <h3 class="notice__title">A Note on Scope</h3>
+          <p>
+            HELIX is a <strong>conceptual modeling tool</strong>, not a diagnostic or clinical instrument.
+            It does not predict individual outcomes or replace professional assessment.
+          </p>
+          <ul class="notice__list">
+            <li>Parameters are illustrative, chosen to produce meaningful behavior</li>
+            <li>Human experience is irreducibly complex&mdash;no model captures it fully</li>
+            <li>HELIX is designed to open conversations, not close them</li>
+          </ul>
+          <p class="notice__footer">
+            If you or someone you know is in crisis, please contact the
+            <a href="https://988lifeline.org" target="_blank" rel="noopener">988 Suicide &amp; Crisis Lifeline</a>
+            or the <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener">SAMHSA National Helpline</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="nav__helix-mark" aria-hidden="true">&#x2ADD;</span>
+          <span>HELIX &mdash; Human Emotional Life Integration Calculus</span>
+        </div>
+        <p class="footer__copy">
+          &copy; <span id="footer-year"></span> Shronda Jeanine &amp; Company. All rights reserved.
+          <br/>
+          <em>With Purpose on Purpose.</em>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/model.js"></script>
+  <script src="assets/js/visualization.js"></script>
+  <script src="assets/js/controls.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    const canvas = document.getElementById('particles');
+    const ctx2d = canvas.getContext('2d');
+    let particles = [];
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < 40; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.5 + 0.5,
+          dx: (Math.random() - 0.5) * 0.3,
+          dy: (Math.random() - 0.5) * 0.3,
+          opacity: Math.random() * 0.4 + 0.1
+        });
+      }
+    }
+    function drawParticles() {
+      ctx2d.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx2d.beginPath();
+        ctx2d.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx2d.fillStyle = `rgba(201,168,76,${p.opacity})`;
+        ctx2d.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(drawParticles);
+    }
+    resizeCanvas();
+    initParticles();
+    drawParticles();
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+  </script>
+</body>
+</html>
